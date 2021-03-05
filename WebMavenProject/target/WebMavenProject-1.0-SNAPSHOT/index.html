@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <!-- 1) Adding JQuery functionality -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <!-- 2) Adding List JS - https://listjs.com/overview/download/ -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+
+        <!-- 3) Adding own Custom JS & CSS-->
+        <script type="text/javascript" src="js/myScript.js"></script>
+        <link rel="stylesheet" href="css/myCSS.css">
+    </head>
+    <body>
+        <h1>People's List!</h1>
+        <div id="users">
+            <input class="search" placeholder="Search" />
+            <button class="sort" data-sort="name">Sort by name</button>
+            <table>
+                <!-- IMPORTANT, class="list" have to be at tbody -->
+                <tbody class="list">
+                    <tr>
+                        <td class="name">Jonny Stromberg</td>
+                        <td class="born">1986</td>
+                    </tr>
+                    <tr>
+                        <td class="name">Jonas Arnklint</td>
+                        <td class="born">1985</td>
+                    </tr>
+                    <tr>
+                        <td class="name">Martina Elm</td>
+                        <td class="born">1986</td>
+                    </tr>
+                    <tr>
+                        <td class="name">Gustaf Lindqvist</td>
+                        <td class="born">1983</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!--- add our forms-->
+            <table>
+                <td class="name">
+                    <input type="hidden" id="id-field" />
+                    <input type="text" id="name-field" placeholder="Name" />
+                </td>
+                <td class="born">
+                    <input type="text" id="born-field" placeholder="Born" />
+                </td>
+                <td class="add">
+                    <button id="add-btn">Add</button>
+                    <button id="clearALL-btn">Clear All</button>
+                    <button id="tdbLoad-btn">Load From TDB</button>
+                </td>
+            </table>
+
+        </div>
+    </body>
+
+</html>
